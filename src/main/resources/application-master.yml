@@ -1,0 +1,21 @@
+server:
+  port: 8999
+
+spring:
+  datasource:
+    driver-class-name: oracle.jdbc.OracleDriver
+    hikari:
+      connectionTimeout: 30000
+      idleTimeout: 30000
+      maxLifetime: 2000000
+      maximumPoolSize: 20
+      minimumIdle: 5
+      poolName: HikariPoolBooks
+    password: oracle
+    url: jdbc:oracle:thin:@//localhost:1521/ORCLPDB1
+    username: modbd
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle12cDialect
+    hibernate:
+      ddl-auto: create
+      use-new-id-generator-mappings: false

@@ -1,0 +1,43 @@
+version: '3.9'
+services:
+    master:
+        image: store/oracle/database-enterprise:12.2.0.1
+        container_name: modbd_master
+        hostname: master
+        restart: unless-stopped
+        ports:
+            - 1521:1521
+        networks:
+            - modbd
+        volumes:
+            - master_data:/ORCL
+            
+    bucuresti:
+        image: store/oracle/database-enterprise:12.2.0.1
+        container_name: modbd_bucuresti
+        hostname: bucuresti
+        restart: unless-stopped
+        ports:
+            - 1522:1521
+        networks:
+            - modbd
+        volumes:
+            - bucuresti_data:/ORCL
+    brasov:
+        image: store/oracle/database-enterprise:12.2.0.1
+        container_name: modbd_brasov
+        hostname: brasov
+        restart: unless-stopped
+        ports:
+            - 1523:1521
+        networks:
+            - modbd
+        volumes:
+            - brasov_data:/ORCL
+networks:
+    modbd:
+        name: modbd-network
+volumes:
+    master_data: {}
+    bucuresti_data: {}
+    brasov_data: {}
