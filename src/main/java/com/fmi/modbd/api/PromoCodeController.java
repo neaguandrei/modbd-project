@@ -23,9 +23,9 @@ public class PromoCodeController {
 
     @PutMapping("/update")
     public ResponseEntity<PromoCode> update(@RequestBody PromoCode object) throws Exception {
-        PromoCode optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 

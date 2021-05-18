@@ -23,9 +23,9 @@ public class CustomerController {
 
     @PutMapping("/update")
     public ResponseEntity<Customer> update(@RequestBody Customer object) throws Exception {
-        Customer optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 

@@ -23,9 +23,9 @@ public class RestaurantController {
 
     @PutMapping("/update")
     public ResponseEntity<Restaurant> update(@RequestBody Restaurant object) throws Exception {
-        Restaurant optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 

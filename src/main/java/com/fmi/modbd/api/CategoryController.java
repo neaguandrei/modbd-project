@@ -23,9 +23,9 @@ public class CategoryController {
 
     @PutMapping("/update")
     public ResponseEntity<Category> update(@RequestBody Category object) throws Exception {
-        Category optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 

@@ -24,9 +24,9 @@ public class MenuController {
 
     @PutMapping("/update")
     public ResponseEntity<Menu> update(@RequestBody Menu object) throws Exception {
-        Menu optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 

@@ -10,10 +10,10 @@ spring:
       maxLifetime: 2000000
       maximumPoolSize: 20
       minimumIdle: 5
-      poolName: HikariPoolBooks
-    password: oracle
-    url: jdbc:oracle:thin:@//localhost:1522/ORCLPDB1
-    username: modbd
+      poolName: HikariPoolModbd
+    username: sys
+    password: root
+    url: jdbc:oracle:thin:@//localhost:11522/ORCLPDB1
   jpa:
     database-platform: org.hibernate.dialect.Oracle12cDialect
     hibernate:

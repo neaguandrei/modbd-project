@@ -23,9 +23,9 @@ public class OrdersController {
 
     @PutMapping("/update")
     public ResponseEntity<Order> update(@RequestBody Order object) throws Exception {
-        Order optional = repository.findById(object.getId())
+        repository.findById(object.getId())
                 .orElseThrow((() -> new Exception("Not Found")));
-        repository.save(optional);
+        repository.save(object);
         return ResponseEntity.ok().build();
     }
 
