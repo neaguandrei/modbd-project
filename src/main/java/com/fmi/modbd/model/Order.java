@@ -1,5 +1,7 @@
 package com.fmi.modbd.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
@@ -12,6 +14,7 @@ import java.math.BigDecimal;
 @Builder
 @Entity
 @Table(name = "Orders")
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class Order {
 
     @Id

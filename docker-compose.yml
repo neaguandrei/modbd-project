@@ -6,7 +6,7 @@ services:
         hostname: master
         restart: unless-stopped
         ports:
-            - 1521:1521
+            - 1520:1521
         networks:
             - modbd
         volumes:

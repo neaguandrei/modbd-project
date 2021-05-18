@@ -1,5 +1,7 @@
 package com.fmi.modbd.model;
 
+import com.fasterxml.jackson.annotation.JsonIdentityInfo;
+import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
@@ -14,6 +16,7 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "Restaurant")
+@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class Restaurant {
 
     @Id
