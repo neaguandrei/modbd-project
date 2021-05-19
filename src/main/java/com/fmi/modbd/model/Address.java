@@ -14,7 +14,6 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "Address")
-@SecondaryTable(name = "ADDRESS_ALL")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Address {
 
