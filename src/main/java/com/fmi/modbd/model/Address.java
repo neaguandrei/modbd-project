@@ -13,7 +13,8 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "Address")
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
+@SecondaryTable(name = "ADDRESS_ALL")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Address {
 
     @Id
@@ -30,7 +31,6 @@ public class Address {
     private Integer number;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "customer_id")
     private Customer customer;
 
 }
