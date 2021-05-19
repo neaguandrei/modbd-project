@@ -20,6 +20,7 @@ public class CustomerController {
 
     @PostMapping("/save")
     public ResponseEntity<?> save(@RequestBody Customer object) {
+        setAddressCustomer(object);
         repository.save(object);
         return ResponseEntity.ok().build();
     }
@@ -46,5 +47,9 @@ public class CustomerController {
     public ResponseEntity<?> delete(@PathVariable Long id) {
         repository.deleteById(id);
         return ResponseEntity.ok().build();
+    }
+
+    private void setAddressCustomer(Customer object) {
+        object.getAddress().setCustomer(object);
     }
 }
