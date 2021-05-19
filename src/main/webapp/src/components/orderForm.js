@@ -47,7 +47,7 @@ const MenuForm = (props) => {
     fetchData();
   }, []);
 
-  const title = props.item.id === 0 ? 'Create' : `Edit ${props.item.name}`;
+  const title = props.item.id === 0 ? 'Create' : `Edit ${props.item.name ?? props.item.id}`;
   return (
     <Dialog title={title} onClose={props.cancelEdit}>
       <Form
@@ -82,7 +82,7 @@ const MenuForm = (props) => {
 
               <div className="mb-3">
                 <Field
-                  name={"promocode"}
+                  name={"promoCode"}
                   component={DropDownList}
                   data={promocodes}
                   textField={"code"}

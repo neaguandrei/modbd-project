@@ -119,9 +119,10 @@ const Order = () => {
         <Column field="promoCode.id" title="Id Promo" width="150px" />
         <Column field="driver.id" title="Id Driver" width="150px" />
         <Column field="menu.id" title="Id Menu" width="150px" />
-        <Column field="orderDate" title="Date" width="150px" />
-        <Column field="quantity" title="Quantity" />
-        <Column field="totalOrderPrice" title="Total" />
+        <Column field="orderDate.created" title="Created date" width="200px" />
+        <Column field="orderDate.completed" title="Completed date" width="200px" />
+        <Column field="quantity" title="Quantity" width="150px" />
+        <Column field="totalOrderPrice" title="Total" width="150px" />
         <Column title="Actions" cell={OrderActionsCell} />
       </Grid>
 

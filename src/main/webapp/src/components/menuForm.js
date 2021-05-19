@@ -38,7 +38,7 @@ const MenuForm = (props) => {
                 <Field
                   name={"unitPrice"}
                   component={NumericTextBox}
-                  label={"Unir price"}
+                  label={"Unit price"}
                 />
               </div>
             </fieldset>

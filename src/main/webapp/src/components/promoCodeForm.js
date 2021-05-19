@@ -4,7 +4,7 @@ import { Form, Field, FormElement } from "@progress/kendo-react-form";
 import { Input } from "@progress/kendo-react-inputs";
 
 const PromoCodeForm = (props) => {
-  const title = props.item.id === 0 ? 'Create' : `Edit ${props.item.name}`;
+  const title = props.item.id === 0 ? 'Create' : `Edit ${props.item.code}`;
   return (
     <Dialog title={title} onClose={props.cancelEdit}>
       <Form
