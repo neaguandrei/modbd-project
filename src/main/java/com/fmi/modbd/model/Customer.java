@@ -29,7 +29,8 @@ public class Customer {
 
     @OneToOne(
             mappedBy = "customer",
-            cascade = CascadeType.ALL
+            cascade = CascadeType.ALL,
+            fetch = FetchType.LAZY
     )
     private Address address;
 
