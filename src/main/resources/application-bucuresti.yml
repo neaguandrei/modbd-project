@@ -11,13 +11,13 @@ spring:
       maximumPoolSize: 20
       minimumIdle: 5
       poolName: HikariPoolModbd
-    username: sys
-    password: root
-    url: jdbc:oracle:thin:@//localhost:11522/ORCLPDB1
+    username: modbd
+    password: oracle
+    url: jdbc:oracle:thin:@//localhost:1522/orclpdb1.localdomain
   jpa:
     database-platform: org.hibernate.dialect.Oracle12cDialect
     hibernate:
-      ddl-auto: create
+      ddl-auto: none
       use-new-id-generator-mappings: false
   jackson:
     serialization:

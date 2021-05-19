@@ -24,6 +24,4 @@ public class CustomerDto {
 
     private UserDto user;
 
-    private Set<OrderDto> orders;
-
 }

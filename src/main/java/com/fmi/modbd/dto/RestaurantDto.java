@@ -24,8 +24,4 @@ public class RestaurantDto {
 
     private CategoryDto category;
 
-    private List<MenuDto> menus = new ArrayList<>();
-
-    private Set<OrderDto> orders;
-
 }

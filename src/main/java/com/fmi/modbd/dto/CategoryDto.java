@@ -11,12 +11,11 @@ import java.util.Set;
 @Getter
 @Setter
 @Builder
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class CategoryDto {
 
     private Long id;
 
     private String name;
 
-    private Set<RestaurantDto> restaurants;
 }

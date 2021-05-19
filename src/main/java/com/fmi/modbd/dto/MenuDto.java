@@ -23,5 +23,4 @@ public class MenuDto {
 
     private BigDecimal unitPrice;
 
-    private Set<OrderDto> orders;
 }

@@ -21,6 +21,4 @@ public class PromoCodeDto {
 
     private String value;
 
-    private Set<OrderDto> orders;
-
 }

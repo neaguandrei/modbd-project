@@ -20,6 +20,4 @@ public class DriverDto {
 
     private UserDto user;
 
-    private Set<OrderDto> orders;
-
 }
