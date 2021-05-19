@@ -9,7 +9,8 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api/restaurant")
+@CrossOrigin(origins = "http://localhost:3000")
+@RequestMapping("/api/restaurants")
 @AllArgsConstructor
 public class RestaurantController {
 
