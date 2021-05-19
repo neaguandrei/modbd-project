@@ -16,7 +16,7 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "Restaurant")
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Restaurant {
 
     @Id
@@ -29,10 +29,7 @@ public class Restaurant {
     @Column(nullable = false)
     private String name;
 
-    @ManyToOne(
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
-    )
+    @ManyToOne(fetch = FetchType.LAZY)
     private Category category;
 
     @ManyToMany(

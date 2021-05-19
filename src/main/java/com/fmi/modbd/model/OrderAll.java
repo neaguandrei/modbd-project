@@ -14,9 +14,9 @@ import java.math.BigDecimal;
 @Setter
 @Builder
 @Entity
-@Table(name = "Orders")
+@Table(name = "ORDERS_ALL")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Order {
+public class OrderAll {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)

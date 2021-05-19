@@ -13,10 +13,9 @@ import javax.persistence.*;
 @Setter
 @Builder
 @Entity
-@Table(name = "Address")
-@SecondaryTable(name = "ADDRESS_ALL")
+@Table(name = "ADDRESS_ALL")
 @JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
-public class Address {
+public class AddressAll {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
