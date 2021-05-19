@@ -16,7 +16,6 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "Restaurant")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Restaurant {
 
     @Id

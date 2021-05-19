@@ -13,7 +13,6 @@ import javax.persistence.*;
 @Builder
 @Entity
 @Table(name = "OrderDate")
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
 public class OrderDate {
 
     @Id

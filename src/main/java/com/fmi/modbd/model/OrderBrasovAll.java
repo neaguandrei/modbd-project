@@ -15,7 +15,6 @@ import java.math.BigDecimal;
 @Builder
 @Entity
 @Table(name = "ORDERS_BRASOV_ALL")
-@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class OrderBrasovAll {
 
     @Id
