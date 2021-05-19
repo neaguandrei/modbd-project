@@ -14,7 +14,7 @@ import java.util.Set;
 @Builder
 @Entity
 @Table(name = "Customer")
-@JsonIdentityInfo(generator= ObjectIdGenerators.PropertyGenerator.class, property="id")
+@JsonIdentityInfo(generator = ObjectIdGenerators.PropertyGenerator.class, property = "id")
 public class Customer {
 
     @Id
@@ -29,8 +29,7 @@ public class Customer {
 
     @OneToOne(
             mappedBy = "customer",
-            cascade = CascadeType.ALL,
-            fetch = FetchType.LAZY
+            cascade = CascadeType.ALL
     )
     private Address address;
 

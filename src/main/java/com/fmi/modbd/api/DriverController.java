@@ -6,12 +6,14 @@ import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.transaction.Transactional;
 import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "http://localhost:3000")
 @RequestMapping("/api/drivers")
 @AllArgsConstructor
+@Transactional
 public class DriverController {
 
     private final DriverRepository repository;
