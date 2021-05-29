@@ -1,8 +1,5 @@
 package com.fmi.modbd.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
-import com.fmi.modbd.model.*;
 import lombok.*;
 
 import javax.persistence.*;

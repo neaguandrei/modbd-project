@@ -1,7 +1,5 @@
 package com.fmi.modbd.model;
 
-import com.fasterxml.jackson.annotation.JsonIdentityInfo;
-import com.fasterxml.jackson.annotation.ObjectIdGenerators;
 import lombok.*;
 
 import javax.persistence.*;
@@ -16,7 +14,9 @@ import javax.persistence.*;
 public class Address {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
+    @GeneratedValue(generator = "address_generator")
+    @SequenceGenerator(name = "address_generator", sequenceName = "NUMELE_SECVENTEI_DIN_DB", allocationSize = 1)
+    @Column(nullable = false)
     private Long id;
 
     @Column(nullable = false)
@@ -25,7 +25,7 @@ public class Address {
     @Column(nullable = false)
     private String street;
 
-    @Column(nullable = false)
+    @Column(nullable = false, name = "num")
     private Integer number;
 
     @OneToOne(cascade = CascadeType.ALL)
